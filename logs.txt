@@ -1,0 +1,133 @@
+ 
+
+================================================================================
+log for:1,huawei,10.95.54.130,h3c5560
+time:2021-08-14 10:50:35.641627
+<clock>
+09:44:04 bj Tue 01/01/2013
+Time Zone : bj add 08:00:00
+<cpu>
+Slot 1 CPU 0 CPU usage:
+       5% in last 5 seconds
+       6% in last 1 minute
+       5% in last 5 minutes
+
+<memory>
+The statistics about memory is measured in KB:
+Slot 1: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       2005152    343448   1661704         0      1088    114544       82.9%
+-/+ Buffers/Cache:    227816   1777336
+Swap:           0         0         0
+
+<power>
+Slot 1:
+ PowerID State          Mode   Current(A)  Voltage(V)  Power(W)
+ 1       Normal         AC        --          --          --
+ 2       Fault          --        --          --          --
+
+<fan>
+ Slot 1:
+ Fan 1: 
+ State    : Fault
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+ Fan 2: 
+ State    : Normal
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+
+
+<environment>
+System temperature information (degree centigrade):
+ ----------------------------------------------------------------------
+ Slot  Sensor    Temperature  Lower  Warning  Alarm  Shutdown
+ 1     hotspot 1 34           0      57       62     NA      
+
+================================================================================
+log for:1,huawei,10.95.54.130,h3c5560
+time:2021-08-14 10:51:42.759279
+<clock>
+09:45:11 bj Tue 01/01/2013
+Time Zone : bj add 08:00:00
+<cpu>
+Slot 1 CPU 0 CPU usage:
+       4% in last 5 seconds
+       5% in last 1 minute
+       5% in last 5 minutes
+
+<memory>
+The statistics about memory is measured in KB:
+Slot 1: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       2005152    341592   1663560         0      1088    114548       83.0%
+-/+ Buffers/Cache:    225956   1779196
+Swap:           0         0         0
+
+<power>
+Slot 1:
+ PowerID State          Mode   Current(A)  Voltage(V)  Power(W)
+ 1       Normal         AC        --          --          --
+ 2       Fault          --        --          --          --
+
+<fan>
+ Slot 1:
+ Fan 1: 
+ State    : Fault
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+ Fan 2: 
+ State    : Normal
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+
+
+<environment>
+ System temperature information (degree centigrade):
+ ----------------------------------------------------------------------
+ Slot  Sensor    Temperature  Lower  Warning  Alarm  Shutdown
+ 1     hotspot 1 34           0      57       62     NA      
+
+================================================================================
+log for:2,huawei,10.95.54.130,h3c5560
+time:2021-08-14 10:51:55.462876
+<clock>
+09:45:23 bj Tue 01/01/2013
+Time Zone : bj add 08:00:00
+<cpu>
+Slot 1 CPU 0 CPU usage:
+       4% in last 5 seconds
+       5% in last 1 minute
+       5% in last 5 minutes
+
+<memory>
+The statistics about memory is measured in KB:
+Slot 1: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       2005152    343564   1661588         0      1088    114556       82.9%
+-/+ Buffers/Cache:    227920   1777232
+Swap:           0         0         0
+
+<power>
+Slot 1:
+ PowerID State          Mode   Current(A)  Voltage(V)  Power(W)
+ 1       Normal         AC        --          --          --
+ 2       Fault          --        --          --          --
+
+<fan>
+Slot 1:
+ Fan 1: 
+ State    : Fault
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+ Fan 2: 
+ State    : Normal
+ Airflow Direction: Port-to-power
+ Prefer Airflow Direction: Port-to-power
+
+
+<environment>
+System temperature information (degree centigrade):
+ ----------------------------------------------------------------------
+ Slot  Sensor    Temperature  Lower  Warning  Alarm  Shutdown
+ 1     hotspot 1 34           0      57       62     NA      

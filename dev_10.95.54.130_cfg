@@ -1,2 +1,6 @@
-08:03:04 bj Tue 01/01/2013
-Time Zone : bj add 08:00:00
+The statistics about memory is measured in KB:
+Slot 1: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       2005152    343476   1661676         0      1088    114448       82.93%
+-/+ Buffers/Cache:    227940   1777212
+Swap:           0         0         0
