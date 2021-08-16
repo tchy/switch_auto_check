@@ -1,0 +1,25 @@
+================================================================================
+log for:1,huawei,10.95.54.130,h3c5560
+time:2021-08-16 21:01:28.687859
+clock:08:07:22 Tue 01/01/2013
+cpu:8%
+memory:17.0%
+power:Normal Fault
+fan:Fault Normal
+environment:31================================================================================
+log for:  1,huawei,10.95.54.130,h3c5560
+time:  2021-08-16 21:04:23.664638
+clock:  08:10:18 Tue 01/01/2013
+cpu:  5%
+memory:  17.0%
+power:Normal,Fault
+fan:  Fault,Normal
+environment:  32================================================================================
+log for:  1,huawei,10.95.54.130,h3c5560
+time:  2021-08-16 21:07:19.607003
+clock:  08:13:13 Tue 01/01/2013
+cpu:  5%
+memory:  17.0%
+power:Normal,Fault
+fan:  Fault,Normal
+environment:  32
