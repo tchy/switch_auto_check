@@ -6,11 +6,14 @@ import sys
 
 rundir = os.path.dirname(os.path.realpath(sys.argv[0]))
 day = datetime.now().strftime(r"%Y-%m-%d")
-
-with open(os.path.join(rundir, "device_info.csv"), "r", encoding="utf-8-sig") as f:
-    # 获取交换机登录信息，去掉第一行数据
-    # <序号>,<品牌>,<ip>,<账号>,<密码>
-    device_info = f.read().split("\n")[1:]
+try:
+    with open(os.path.join(rundir, "device_info.csv"), "r", encoding="utf-8-sig") as f:
+        # 获取交换机登录信息，去掉第一行数据
+        # <序号>,<品牌>,<ip>,<账号>,<密码>
+        device_info = f.read().split("\n")[1:]
+except:
+    print("未找到相关文件，请将【device_info.csv】文件拷贝至当前目录下")
+    os.system("PAUSE")
 
 for index, info in enumerate(device_info):
     device_type = info.split(",")[1]
@@ -113,3 +116,6 @@ for index, info in enumerate(device_info):
 
         with open("short_logs-{}.txt".format(day), "a+", encoding="utf-8") as f:
             f.write(error_log)   
+
+print("程序运行结束")
+os.system("PAUSE")        
