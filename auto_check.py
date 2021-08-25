@@ -130,6 +130,7 @@ try:
         # 去除答案信息并写入文档
         outpwd = re.sub("(\d+,\w+,[\w\.]+,\w+,)[\w\S]+", r"\1", raw_file)
         f.write(outpwd)
+        print("清空密码成功")
 except Exception as e:
         print("发生以下异常：\n%s\n%s"%(e,"="*40))
         print("【警告】请手动删除密码！")
