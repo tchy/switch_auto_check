@@ -4,13 +4,16 @@ import re
 import os
 import sys
 
+print("使用前请毋打开【device_info.csv】文件，点击任意键开始运行程序。")
+os.system("PAUSE")
 rundir = os.path.dirname(os.path.realpath(sys.argv[0]))
 day = datetime.now().strftime(r"%Y-%m-%d")
 try:
     with open(os.path.join(rundir, "device_info.csv"), "r", encoding="utf-8-sig") as f:
+        raw_file = f.read()
         # 获取交换机登录信息，去掉第一行数据
         # <序号>,<品牌>,<ip>,<账号>,<密码>
-        device_info = f.read().split("\n")[1:]
+        device_info = raw_file.split("\n")[1:]
 except:
     print("未找到相关文件，请将【device_info.csv】文件拷贝至当前目录下")
     os.system("PAUSE")
@@ -31,7 +34,6 @@ for index, info in enumerate(device_info):
         'password': password,
         'port' : 22,      # optional, defaults to 22
     }
-    print(device_connect)
     try:
         # 连接交换机
         conect = ConnectHandler(**device_connect)
@@ -58,6 +60,7 @@ for index, info in enumerate(device_info):
                             "<fan>\n"+_fan, "<environment>\n"+_environment])
         with open("logs-{}.txt".format(day), "a+", encoding="utf-8") as f:
             f.write(out_logs)
+        print("写入logs.txt成功")
     
     except Exception as e:
         print("发生以下异常：\n%s\n%s"%(e,"="*40))
@@ -108,7 +111,7 @@ for index, info in enumerate(device_info):
         with open(os.path.join(rundir, "short_logs-{}.txt".format(day)), "a+", encoding="utf-8") as f:
             f.write(short_logs)    
         
-        print(str(datetime.now()) + " saveing config from device {}".format(ipaddr))
+        print("写入short_logs.txt成功")
 
     except Exception as e:
         print("发生以下异常：\n%s\n%s"%(e,"="*40))
@@ -116,6 +119,15 @@ for index, info in enumerate(device_info):
 
         with open("short_logs-{}.txt".format(day), "a+", encoding="utf-8") as f:
             f.write(error_log)   
+
+try:
+    with open(os.path.join(rundir, "device_info.csv"), "w", encoding="utf-8-sig") as f:
+        # 去除答案信息并写入文档
+        outpwd = re.sub("(\d+,\w+,[\w\.]+,\w+,)[\w\S]+", r"\1", raw_file)
+        f.write(outpwd)
+except Exception as e:
+        print("发生以下异常：\n%s\n%s"%(e,"="*40))
+        print("【警告】请手动删除密码！")
 
 print("程序运行结束")
 os.system("PAUSE")        
