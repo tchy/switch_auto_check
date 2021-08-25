@@ -19,10 +19,15 @@ except:
     os.system("PAUSE")
 
 for index, info in enumerate(device_info):
-    device_type = info.split(",")[1]
-    ipaddr =   info.split(",")[2]
-    username = info.split(",")[3]
-    password = info.split(",")[4]
+    try:
+        device_type = info.split(",")[1]
+        ipaddr =   info.split(",")[2]
+        username = info.split(",")[3]
+        password = info.split(",")[4]
+    except:
+        print("请检查【device_info.csv】是否填写正确！\n填写格式为：<序号>,<品牌>,<ip>,<账号>,<密码>")
+        continue
+
     out_info = "log for:  " + ",".join([str(index+1), device_type, ipaddr, username])
     
     print(str(datetime.now())+" connecting to device {}".format(ipaddr))
